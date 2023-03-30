@@ -1,22 +1,23 @@
 <template>
   <div>
-    <h1>这是使用 ivew-design 组件库的首页</h1>
+    <h1>我是超级管理员的首页</h1>
   </div>
 </template>
 
 <script>
 export default {
-  components:{
-    
-  },
   data(){
-    return {
+    return{
 
     }
+  },
+  mounted(){},
+  methods:{
+
   }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
