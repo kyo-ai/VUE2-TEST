@@ -52,7 +52,7 @@ export default {
             if(res.code === 200){
               console.log(res);
               this.$Message.success('登录成功');
-              localStorage.setItem('router_token',this.loginInfo.phone);
+              sessionStorage.setItem('router_token',this.loginInfo.phone);
               this.$router.replace({
                 name:'UserAuthIndex'
               })

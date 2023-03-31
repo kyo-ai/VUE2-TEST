@@ -76,7 +76,7 @@ const router = new Router({
 //路由全局的前置守卫，若为登录，则先跳转到登录页
 router.beforeEach((to,from,next)=>{
   //使用to.name != Login 来避免回调地狱
-  if(!(localStorage.getItem('router_token'))){
+  if(!(sessionStorage.getItem('router_token'))){
     if(to.name != 'Login'){
       Message.error({
         background: true,
