@@ -8,7 +8,13 @@ export default new Router({
     {
       path: '/',
       name: 'index',
+      redirect:"/login",
       component: ()=>import("@/views/index.vue")
-    }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: ()=>import("@/views/login/Login.vue")
+    },
   ]
 })
