@@ -2,12 +2,15 @@ function userInfo(res) {
   return {
     code: 200,
     data: {
-      'name': '张三',
-      'age': 10
+      'phoneNumber': '13888888888',
     }
   }
 }
-
+/**
+ * 
+ * @param {*} res 
+ * @returns 
+ */
 function userAdress(res){
   return {
     code: 200,
@@ -16,4 +19,4 @@ function userAdress(res){
     }
   }
 }
-export default { userInfo ,userAdress}
+export default { userInfo ,userAdress }

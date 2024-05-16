@@ -1,5 +1,6 @@
 import Mock from 'mockjs';
 import user from './modules/user.js'
+import login from './modules/login.js'
 
 /* 初始示例 */
 /* Mock.mock('/mock/list', { 
@@ -10,6 +11,8 @@ import user from './modules/user.js'
 Mock.mock('/mock/user', 'get',user.userInfo);
 
 Mock.mock('/mock/userAdress', 'get',user.userAdress);
+
+Mock.mock('/mock/login', 'post',login.userLogin);
 /* 
   vue组件中可直接使用以下原生写法获取数据
   this.$http.get('/mock/user').then((res)=>{

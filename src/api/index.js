@@ -6,3 +6,16 @@ export function getUserInfo(params) {
     method: 'GET',
   })
 }
+export function userLogin(params) {
+  return service({
+    url: `/login`,
+    method: 'POST',
+  })
+}
+
+export function getUserAdress(params) {
+  return service({
+    url: `/userAdress`,
+    method: 'GET',
+  })
+}
