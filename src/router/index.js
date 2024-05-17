@@ -19,22 +19,29 @@ const routes = [
     path: '/layouts',
     name: 'Layouts',
     component: ()=>import("@/views/layouts/index.vue"),
-    redirect: '/layouts/main-contentA',
+    redirect: '/layouts/content-a',
     children:[
       {
-        path:'main-contentA',
+        path:'content-a',
         name:'ContentA',
-        component: ()=>import("@/views/layouts/modules/main-content/contentA.vue"),
+        component: ()=>import("@/views/contents/module-a/ContentA.vue"),
       },
       {
-        path:'main-contentB',
+        path:'detail-A',
+        name:'DetailA',
+        component: ()=>import("@/views/contents/module-a/Detail.vue"),
+      },
+
+      {
+        path:'content-b',
         name:'ContentB',
-        component: ()=>import("@/views/layouts/modules/main-content/contentB.vue"),
+        component: ()=>import("@/views/contents/module-b/ContentB.vue"),
       },
+
       {
-        path:'main-contentC',
+        path:'content-c',
         name:'ContentC',
-        component: ()=>import("@/views/layouts/modules/main-content/contentC.vue"),
+        component: ()=>import("@/views/contents/module-c/ContentC.vue"),
       },
     ]
   },

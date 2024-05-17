@@ -66,7 +66,7 @@ export default {
 }
 
 .el-header {
-  background-color: #B3C0D1;
+  background-color: #e4e8ec;
   color: #333;
   text-align: center;
   line-height: 60px;
@@ -80,9 +80,8 @@ export default {
 }
 
 .el-main {
-  background-color: #E9EEF3;
+  background-color: #FFF;
   color: #333;
   text-align: center;
-  /* line-height: 160px; */
 }
 </style>

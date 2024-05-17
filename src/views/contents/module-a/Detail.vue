@@ -1,6 +1,6 @@
 <template>
   <div>
-AAAAAA
+      fffffff
   </div>
 </template>
 
