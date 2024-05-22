@@ -27,7 +27,7 @@ const routes = [
         component: ()=>import("@/views/contents/module-a/ContentA.vue"),
       },
       {
-        path:'detail-A',
+        path:'detail-A/:id',
         name:'DetailA',
         component: ()=>import("@/views/contents/module-a/Detail.vue"),
       },
@@ -44,6 +44,13 @@ const routes = [
         component: ()=>import("@/views/contents/module-c/ContentC.vue"),
       },
     ]
+  },
+
+  /* 个人信息 */
+  {
+    path:'/person-info',
+    name:'PersonInfo',
+    component: ()=>import("@/views/user/PersonInfo.vue"),
   },
 
 ]

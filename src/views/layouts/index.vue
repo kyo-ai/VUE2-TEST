@@ -52,36 +52,36 @@ export default {
 }
 </script>
 
-<style scoped>
-#test {
-  color: red;
+<style lang="less" scoped>
+/* 解决滚动条下滑时Aside下方出现空白的样式bug */
+body,
+html {
+  height: 100%;
 }
-
 .el-container {
   height: 100vh;
-
-  .el-aside {
-    background: #545c64;
-  }
 }
-
 .el-header {
-  background-color: #e4e8ec;
-  color: #333;
+  background-color: #3f4449;
+  color: rgb(255, 255, 255);
   text-align: center;
   line-height: 60px;
 }
 
 .el-aside {
-  background-color: #D3DCE6;
+  background-color: #545c64;
   color: #333;
+  height: 100vh;
   text-align: center;
-  /* line-height: 200px; */
 }
 
 .el-main {
-  background-color: #FFF;
   color: #333;
-  text-align: center;
+  /* text-align: center; */
+  background-color: #aaaaad;
+  padding: 10px;
 }
+
+
+
 </style>

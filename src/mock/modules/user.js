@@ -1,22 +1,17 @@
+/**
+ * 
+ * @param {*}
+ * @returns 
+ */
 function userInfo(res) {
   return {
     code: 200,
     data: {
-      'phoneNumber': '13888888888',
+      userName: '13888888888',
+      phoneNumber: '13888888888',
+      userAddress: '浙江省杭州市西湖区XX街道XXX小区一单元XXXX室',
+      birthday: '1988-02-28'
     }
   }
 }
-/**
- * 
- * @param {*} res 
- * @returns 
- */
-function userAdress(res){
-  return {
-    code: 200,
-    data: {
-      'adress': '中国大陆',
-    }
-  }
-}
-export default { userInfo ,userAdress }
+export default { userInfo }

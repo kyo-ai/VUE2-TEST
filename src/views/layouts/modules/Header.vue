@@ -10,11 +10,11 @@
         </div>
 
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>个人信息</el-dropdown-item>
+          <el-dropdown-item @click.native="personInfo">个人信息</el-dropdown-item>
           <el-dropdown-item @click.native="logout">退出登录</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <span>{{phone}}</span>
+      <span>{{ phone }}</span>
     </div>
   </div>
 
@@ -27,24 +27,38 @@ export default {
   name: 'HeaderModule',
   data() {
     return {
-      phone:''
+      phone: ''
     }
   },
-  mounted() { 
+  mounted() {
     getUserInfo().then((res) => {
-      if(res.code === 200){
+      if (res.code === 200) {
         this.phone = res.data.phoneNumber;
       }
-      console.log(res, "GGGGGGGG")
-    })
+    });
   },
   methods: {
-    logout(){
-      localStorage.removeItem('mock-token');
-      this.$router.replace({
-        path:'/login'
+    personInfo(){
+      this.$router.push({
+        path: '/person-info'
       })
-      console.log("退出登录")
+    },
+    logout() {
+      this.$confirm('确定退出此账号吗?', '退出登录', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        showClose: false,
+        type: 'warning'
+      }).then(() => {
+        localStorage.removeItem('mock-token');
+        this.$router.replace({
+          path: '/login'
+        })
+        console.log("退出登录")
+      }).catch(() => {
+
+      });
+
     },
     collapseAside() {
       Bus.$emit('collapseAside')
@@ -73,6 +87,7 @@ export default {
   height: 40px;
   margin: 10px 0;
   width: 60px;
+
   img {
     cursor: pointer;
     width: 40px;

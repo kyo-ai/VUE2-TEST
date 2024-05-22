@@ -12,10 +12,3 @@ export function userLogin(params) {
     method: 'POST',
   })
 }
-
-export function getUserAdress(params) {
-  return service({
-    url: `/userAdress`,
-    method: 'GET',
-  })
-}

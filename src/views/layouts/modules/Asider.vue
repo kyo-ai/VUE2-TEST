@@ -70,10 +70,6 @@ export default {
 /deep/ .el-menu-item-group__title {
   padding: 7px 40px 7px 20px;
 }
-
-/* /deep/ ul li{
-    padding: 0 50px;
-  } */
 .el-menu {
   border: none;
 }

@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="logo-img">
-      <img src="@/assets/img/logo.png" alt="">
+      <img src="@/assets/img/logo.jpeg" alt="">
     </div>
     <div class="form-style">
-      <h3 style="margin-bottom: 30px;">测试账号：账号:13888888888 , 密码:123456</h3>
-      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+      <h3 style="margin-bottom: 30px;text-align: center;">测试账号：账号:13888888888 , 密码:123456</h3>
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="80px" class="demo-ruleForm">
         <el-form-item label="手机号" prop="userName">
           <el-input v-model="ruleForm.userName" placeholder="请输入手机号码" clearable></el-input>
         </el-form-item>
@@ -50,10 +50,10 @@ export default {
       },
       rules: {
         userName: [
-          { required: true, message: '请输入正确的手机号', trigger: 'submit', validator: userNameRule }
+          { required: false, message: '请输入正确的手机号', trigger: 'submit', validator: userNameRule }
         ],
         passWord: [
-          { required: true, message: '请输入密码', trigger: 'blur' },
+          { required: false, message: '请输入密码', trigger: 'blur' },
           { min: 6, max: 10, message: '长度在6到10个字', trigger: 'submit', validator: passWordRule }
         ]
       }
@@ -101,11 +101,17 @@ export default {
 
 <style lang="less" scoped>
 .container {
+  height: 100vh;
+  background-color: #C0C4CC;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 60px;
-  .logo-img>img {
-    width: 75%;
+  .logo-img {
+    
+    img {
+      width: 700px;
+      border-radius: 10px;
+    }
   }
 }
 
