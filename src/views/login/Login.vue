@@ -69,7 +69,6 @@ export default {
           if (this.ruleForm.userName == 13888888888 && this.ruleForm.passWord == '123456') {
             userLogin().then((res)=>{
               if(res.code === 200){
-                console.log(res,'SSSSSS');
                 localStorage.setItem( 'mock-token', res.data.token);
               }             
             })

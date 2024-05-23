@@ -10,7 +10,7 @@ function userInfo(res) {
       userName: '13888888888',
       phoneNumber: '13888888888',
       userAddress: '浙江省杭州市西湖区XX街道XXX小区一单元XXXX室',
-      birthday: '1988-02-28'
+      birthday: '1912-02-28'
     }
   }
 }
