@@ -14,6 +14,8 @@ Mock.mock('/mock/user', 'get',user.userInfo);
 Mock.mock('/mock/login', 'post',login.userLogin);
 
 Mock.mock('/mock/computerList', 'get',computer.computerList);
+
+Mock.mock('/mock/computerTable', 'get',computer.computerTable);
 /* 
   vue组件中可直接使用以下原生写法获取数据
   this.$http.get('/mock/user').then((res)=>{

@@ -6,3 +6,10 @@ export function getComputerList() {
     method: 'GET',
   })
 }
+
+export function getComputerTable() {
+  return service({
+    url: `/computerTable`,
+    method: 'GET',
+  })
+}

@@ -41,7 +41,7 @@ export default {
     },
     computerInfo: {
       type: Object,
-      default() {
+      default: ()=> {
         return null;
       }
     },
