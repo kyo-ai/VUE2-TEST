@@ -1,7 +1,6 @@
 <template>
   <div>
-    123
-
+    测试用例首页
   </div>
 </template>
 
@@ -14,17 +13,16 @@ export default {
     }
   },
   mounted() {
-
     /* //Mock原生写法
-    this.$http.get('/mock/userAdress').then((res) => {
+    this.$http.get('/mock/login').then((res) => {
       console.log(res, "AAAA")
     }) */
-
 
     /* Mock配合axios封装写法 */
     getUserInfo().then((res) => {
       console.log(res, "GGGGGGGG")
-    })
+    });
+
   }
 }
 </script>

@@ -137,6 +137,7 @@ if (config.build.productionGzip) {
   )
 }
 
+/* 安装webpack-bundle-analyzer插件之后，打包时运行 npm run build --report 可查看打包分析体积表 */
 if (config.build.bundleAnalyzerReport) {
   const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
   webpackConfig.plugins.push(new BundleAnalyzerPlugin())
